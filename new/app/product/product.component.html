@@ -1,0 +1,21 @@
+<!--<h1>{{title}}</h1>-->
+<div class="row">
+    <table class="table table-hover">
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Date</th>
+            <th>Price</th>
+            <th>Image</th>
+            <tr *ngFor="let p of products">
+                <td>{{p.productId}}</td>
+                <td>{{p.productName}}</td>
+                <td>{{p.productCode}}</td>
+                <td>{{p.releaseDate}}</td>
+                <td>{{p.price}}</td>
+                <td><img src="{{p.imageUrl}}"  style.height={{p.height}} style.width={{p.width}}/></td>
+            </tr>
+        </thead>
+    </table>
+</div>

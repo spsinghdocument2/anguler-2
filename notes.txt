@@ -1,0 +1,187 @@
+Everything is JS is object but JS dnt have any classes like C# and Java.
+JS is a Class-free Language.
+Where the first object comes from?
+
+Simple Demo: NaN
+Power of JS:
+SublimeTextEditor
+
+Typeof NaN: Number;
+Performa any operation with undefined ;;;Output would be NaN..
+How to deal with NaN.
+
+Functions:
+Can/cant have return statement.
+No return statement= undefined return.
+Only return=undefined.
+Return value = return value.
+Func can be created in 2 psbl ways.
+	1. Function as an expression. YOU cant use the function without creating it.
+	Function will be defined on the top but it will initialize only where the statement is declared.
+	2. Function as a statement. Does not matter where u creating it. U can use it anywhere.
+	JS will push it on top of ur JS file. So that it can be used anywhere before function creation also.
+Func can be called in 4 psbl ways.
+Function return statement will Depend on how function is called.
+
+Function add(num1, num2)
+{
+Var res = num1+ num2;
+}
+
+	1. Calling Function as a Function: Function Invocation Pattern.
+	Var a = add(7,9)//It will return undefined.
+	2. Calling Function using new operator: Constructor Invocation Pattern. Doesnt matter function will have or not return statement.
+	Var a = new add(7,9);
+	Output: Add{}//It will ignore return statement and return  Object.
+	
+Param work in JS.
+	
+	Function add(num1, num2)
+	{
+	Console.log(arguments.length);//It will return 4, arguments[0] to [3] caan be retrieved but [6] will undefined
+	Var res = num1+ num2;
+	Return res;
+	}
+	Call1: Var a = add(7);//NaN
+	Call2 Var a = add(7,78,10, 20)//85
+	Besides the params we pass the extra param is used as argument.
+	Extra Paramas called as Arguments in short terms.
+	Arguments: Array like object. Its not an array.
+	Arguments.push(67); //will throw an error as it is not an array. 
+	//Check how to convert arguments to Array.
+	Questions on Arguments.`
+	
+	Why Object n Polymorphism is not needed in JS.
+
+OBJECTS:
+Create Objects in 3 ways:
+	1. Object as a Literal.
+	2. Object using Constructor.
+	3. Using Object.Create//not supported in all browers
+	
+Object as a Literal:
+Var cat ={
+Name:'foo',
+Color:'White',
+Age: 26
+};
+
+Object Invocation types:
+Cat.Color
+Cat['color']
+
+Object Properties types:
+Console.log(Object.getOwnPropertyDescriptor(cat, 'name'));
+JS Object properties are internally stored as Objects: All three properties are object and not string/number.
+Value: 'foo'
+Writeable: true,
+Enumerable: true,
+Configurable: true
+
+If we need to create an object whose value we don’t want to change.
+'use strict' // Used to enable strict mode and JS will throw the errors wherever exception is 
+Console.log(cat.name);
+Object.defineProperty(cat, 'name', {writable: false});//JS ignoring the exceptiongetting thrown.
+cat.name='koo';
+Console.log(cat.name);
+
+
+Creating JSON Objects:
+
+console.log(JSON.stringify(cat);//Will parse the object to JSON.
+{"name": "foo", "color": "white", "age": "26"}
+
+
+Object.defineProperty(cat, 'color', {enumerable: false});//To restrict the print of Color property of CAT.
+console.log(JSON.stringify(cat);
+{"name": "foo",  "age": "26"}
+
+POST LUNCH:
+
+PROTOTYPE:
+
+Way of creating a function:
+1.
+Function foo(who){//function
+this.me=who;
+}
+2.
+Var a1= new foo("james");//objects
+Var a2= new foo(bond");
+Console.log(a1.me);//James
+Console.log(a2.me);//bond
+Console.log(typeof(object));//function
+
+
+Keep in Mind: Cannot create a  square from a circle.
+//Circle: Function Foo
+//Rectangle: Object
+//Square: Prototype Object
+Whenever u create an function in JS. It will create a prototype object for you
+
+A1.constructor will take you to FOO
+Here Constructor doesn’t mean that A1 has created the Function FOO.
+Constructor is a function in JS
+A1 is create by FOO.Prototype.
+
+Property. A1.[[P]]= foo.Prototype   <<[Prototype]>>
+__proto:
+
+Function has Prototype.
+Object has __proto.
+__proto will not work in IE. 
+In IE will use a1.constructor.prototype
+
+
+Var a1= new foo("james");//objects
+Var a2= new foo(bond");
+Console.log(a1.me);//James
+Console.log(a2.me);//bond
+1.
+A1.me = "dan";
+Console.log(a2.me);//
+Print bond
+2.
+
+Function foo(who){
+this.me=who;
+Foo.prototype.Identity=function(){
+Return "I am " + this.me}
+Foo.prototype.age = 16;
+Var a1= new foo("james");
+Var a2= new foo(bond");
+
+Console.log(a1.me);
+Console.log(a1.age);
+A1.prototype.age=17;//will throw the error;
+A1.__proto__.age =16; //will work
+Console.log(a2.age)
+
+Next:
+A1.age =16; //will work
+Console.log(a2.age)
+
+
+
+..
+Main.ts will be converted to main.js
+transpilation
+Angular1: JS4.0
+Angular2: JS5.0//Class is here
+
+Angular2 :Dropped 2 way data binding from Angular1
+DataBindings:
+	1. Interpolation.
+	2. Event Binding
+	3. Property Binding.
+	//MediaQuery
+	
+	
+	TS	BINDING	
+	TITLE	INTERPOLATION	{{}}
+	CLICK	EVENTBINDING	CLICK BUTTON
+		PROPERTY	
+PROPERTY + EVENT BINDING = 2 WAY BINDING [()]
+
+VISUAL STUDIO 2015 PROFESSIONAL PRODUCT KEY
+HMGNV-WCYXV-X7G9W-YCX63-B98R2
