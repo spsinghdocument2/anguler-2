@@ -1,0 +1,83 @@
+
+
+<div class="container pad_btm50">
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad_rt0 mobile_pdlt0  acc_serv">
+       
+       <h1>home page</h1>
+      
+       <br/> 
+        ID<input type="text"  [(ngModel)]="customerObj.ID" name="ID" [ngClass]="{redBorder: IdError}"><span style="color:red">{{IdError}}</span><br/>    
+       FirstName<input type="text"  [(ngModel)]="customerObj.FirstName" name="FirstName" [ngClass]="{redBorder: FirstNameError}"><span style="color:red">{{FirstNameError}}</span><br/>
+       MidName<input type="text" [(ngModel)]="customerObj.MidName" name="MidName" [ngClass]="{redBorder: MidNameError}"><span style="color:red">{{MidNameError}}</span><br/>
+       LastNmme<input type="text" [(ngModel)]="customerObj.LastNmme" name="LastNmme" [ngClass]="{redBorder: LastNmmeError}"><span style="color:red">{{LastNmmeError}}</span><br/>
+      FatherName<input type="text" [(ngModel)]="customerObj.FatherName" name="FatherName" [ngClass]="{redBorder: FatherNameError}"><span style="color:red">{{FatherNameError}}</span><br/>
+      Email<input type="text" [(ngModel)]="customerObj.Email"name="Email" [ngClass]="{redBorder: EmailError}"><span style="color:red">{{EmailError}}</span><br/>
+
+       <div  class="col-lg-4 col-sm-6 col-xs-12 mobile_pdlt0 mobile_pdrt0">
+       <input type="radio" name="radiog_dark"  id="radio4" class="css-checkbox" value="Mail" [(ngModel)]="customerObj.Gender">
+        <label for="radio4" class="css-label"><img src="images/ach.png" width="50px;" class="mar_rt10">Mail</label>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12 mobile_pdlt0 mobile_pdrt0">
+        <input type="radio" name="radiog_dark" id="radio5" class="css-checkbox" value="Female"  [(ngModel)]="customerObj.Gender">
+        <label for="radio5" class="css-label"><img src="images/visa_master.png" width="50px;" class="mar_rt10"> Female</label>
+        </div>
+         <div class="form-group">
+             <br/>
+        <label>SELECT YOUR SECURITY QUESTION <span class="font_red font12 line_ht0">*</span></label>
+        <select class="form-control" name="singleSelect" id="singleSelect" [(ngModel)]="customerObj.SecurityQuestion" [ngClass]="{redBorder: SecurityQuestionError}" >
+        <option value="">---Please select---</option> 
+        <option *ngFor="let item of list" [value]="item.value">{{item.SecurityQuestions}}</option>
+        </select>
+        <span style="color:red">{{SecurityQuestionError}}</span>
+         </div>
+      <div class="form-group mar_top20 col-xs-12 mobile_pdlt0 mobile_pdrt0">
+
+                 <div class="custom_check col-lg-12 col-md-12 col-sm-12 col-xs-12 pad_rt0 pad_lt20 mar_top20 mar_btm10">
+                    <input [(ngModel)]="customerObj.checkboxTermsConditions" type="checkbox" id="c1">
+                    <label for="c1" class="font_color1">I agree to the terms and conditions above.</label>
+                    <span style="color:red;">{{termsAndConditionsError}}</span>
+                </div>
+
+      <span style="color:green; font-size:12px; padding-left:10px;">{{confirmation}}</span><span style="color:red; font-size:12px;">{{error}}</span>
+     <button class="btn btn-default width100 pull-left" type="button" >Reset</button> 
+     <button (click)="Save()" class="btn btn-default width100 btn_green pull-right" type="button">Save</button>
+                               
+                                </div>
+<br/>
+       <div class="row">
+    <table class="col-md-12 table table-bordered table-striped table-condensed cf mobile_pdlt0 mobile_pdrt0">
+        <thead>
+            <th>ID</th>
+            <th>FirstName</th>
+            <th>MidName</th>
+            <th>LastNmme</th>
+            <th>FatherName</th>
+             <th>Email</th>
+             <th>Gender</th>
+             <th>SecurityQuestion</th>
+              <th>checkboxTermsConditions</th>
+             
+            <!--<th>Image</th>-->
+            <tr *ngFor="let p of products">
+                <td>{{p.ID}}</td>
+                <td>{{p.FirstName}}</td>
+                <td>{{p.MidName}}</td>
+                <td>{{p.LastNmme}}</td>
+                <td>{{p.FatherName}}</td>
+                 <td>{{p.Email}}</td>
+                 <td>{{p.Gender}}</td>
+                 <td>{{p.SecurityQuestion}}</td>
+                 <td>{{p.checkboxTermsConditions}}</td>
+                <!--<td><img src="{{p.imageUrl}}"  style.height={{p.height}} style.width={{p.width}}/></td>-->
+            </tr>
+        </thead>
+    </table>
+</div>
+<br/>
+    <div *ngIf="loading"  class="loadingOverlay"></div>   
+    </div>
+    
+</div>
+<input type="button" (click)="onClick()" value="parent">
+{{parentData}}

@@ -1,0 +1,41 @@
+<div class="box-holder site-holder">
+
+ <!--//////////////////-->
+        <section id="header" >
+            <nav class="navbar navbar-default no-margin navbar-fixed-top">
+                <div class="navbar-header fixed-brand pull-left"> 
+                    <a href=""  class="navbar-brand"><i class="fa fa-list btn-nav-toggle-responsive text-white "></i><span>                    
+                        <img alt="" src="images/logo.png" width="190"></span></a> </div>
+                <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse show-collapse">                  
+                      <ul id="RightMenuId"  class="nav navbar-top-links navbar-right user_panel heder_nav">
+                      
+                        <li><a href=""><i class="fa fa-sign-out"></i> Log out</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="clearfix"></div>
+        </section>
+
+
+                          <!--<router-outlet  (notify)="onNotifyClickd($event)" [parentData]="ptext.value" ></router-outlet>-->
+<router-outlet></router-outlet>
+
+
+            <div id="footer" class="footer">
+                <label class="f_mainwhite">
+                    Copyright &copy; 2016
+                    <a href="" ng-click="Mainlogout()">Mid-Atlantic Finance</a>
+                    <a href="/PrivacyStatement" target="_blank">Privacy Statement</a>
+                    <a href="/CookiePolicy" target="_blank">Cookie Policy</a>
+                    <a href="/MAFDisclaimer" target="_blank">MAF Disclaimer</a>
+                    <a href="/TermsOfService" target="_blank">Terms Of Service</a>
+                </label>
+                <div class="clearfix"></div>
+                <label class="">Need Help with your account please call to speak to a MAF representative  <strong class="lead font_color1">800-793-9661 x 600.</strong></label>
+            </div>
+<div *ngIf="showName"><sp-app></sp-app></div>
+<div>{{showName}}</div>
+<input type="text" #ptext (Keyup)="0">
+<h1>parent titel</h1>
+{{showMessage}}
+        </div>

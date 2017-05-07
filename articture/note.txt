@@ -1,0 +1,21 @@
+npm install ng2-bootstrap
+=================================================
+systemjs.config.js   me 
+ ----
+
+  map: 
+{
+     
+ // our app is within the app folder
+  
+    app: 'app',
+ 
+      // ng2-bootstrap
+  
+      'moment': 'node_modules/moment/moment.js',
+ 
+   'ng2-bootstrap/ng2-bootstrap': 'node_modules/ng2-bootstrap/bundles/ng2-bootstrap.umd.js',
+
+=
+
+
