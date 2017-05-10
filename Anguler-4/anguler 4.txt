@@ -1,0 +1,57 @@
+npm install -g @angular/cli
+npm install -g @angular/cli@latest
+
+ng -v
+ng new projectName
+cd projectName
+ng -v
+
+http://localhost:4200/
+-----------------------------component creat-----------
+ng g c name
+
+-------------------------------pipe filter---------------
+ng g p name
+
+----------------------------- server iis (https hona chahya)-----------
+ng build
+---------
+ng build --prod
+
+-----------------------------------------update----------------------
+npm install typescript@2.2.1 save
+---
+npm install @angular/common@next @angular/compiler@next @angular/compiler-cli@next @angular/core@next @angular/forms@next @angular/http@next @angular/platform-browser@next @angular/platform-browser-dynamic@next @angular/platform-server@next @angular/router@next @angular/animations@next --save
+
+-------------------------
+npm uninstall -g @angular/cli or angular-cli
+
+npm cache clean
+npm install -g @angular/cli
+npm install -g @angular/cli@latest
+
+---------------------------------------------------------
+Scaffold	Usage
+
+Component	ng g component my-new-component
+
+Directive	ng g directive my-new-directive
+
+Pipe	       ng g pipe my-new-pipe
+
+Service	      ng g service my-new-service
+Class	      ng g class my-new-class
+Guard	      ng g guard my-new-guard
+Interface	ng g interface my-new-interface
+Enum	      ng g enum my-new-enum
+Module	     ng g module my-module
+-----------------------------------------------------------------------
+http://localhost:4200
+ng serve --host 0.0.0.0 --port 4201
+----------------------------------------------
+ng help
+ng test
+-------------------
+ng generate module admin
+installing module
+  create src/app/admin/admin.module.ts

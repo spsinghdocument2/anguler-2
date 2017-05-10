@@ -55,7 +55,7 @@ export class newComponent
             return this._name;
         }
         //---------------------------
-       // @Input() parentData :string ="wwwwwwwwwwww";
+       //@Input() parentData :string ="wwwwwwwwwwww";
       
        @Input()
         set parentData(name : string )
